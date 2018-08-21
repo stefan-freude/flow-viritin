@@ -48,25 +48,25 @@
 
     <repositories>
         <repository>
-          <id>zd-nexus-releases</id>
-          <url>https://nexus.zd.guj.de/repository/sbs_maven_releases/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
+          <id>zd-nexus-releases</id>
+          <url>https://nexus.zd.guj.de/repository/sbs_maven_releases/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
         </repository>
         <repository>
-          <id>zd-nexus-snapshots</id>
-          <url>https://nexus.zd.guj.de/repository/sbs_maven_snapshots/</url>
-          <releases>
-            <enabled>false</enabled>
-          </releases>
-          <snapshots>
-            <enabled>true</enabled>
-          </snapshots>
-        </repository> 
+          <id>zd-nexus-snapshots</id>
+          <url>https://nexus.zd.guj.de/repository/sbs_maven_snapshots/</url>
+          <releases>
+            <enabled>false</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </repository>
         <repository>
             <id>Vaadin Directory</id>
             <url>http://maven.vaadin.com/vaadin-addons</url>
