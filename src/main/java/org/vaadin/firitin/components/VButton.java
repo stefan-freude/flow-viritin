@@ -18,7 +18,8 @@ public class VButton extends Button implements FluentHasSize<VButton>, FluentHas
     private ButtonColor color;
 
     public enum ButtonType implements ThemeStyle<ButtonType> {
-        PRIMARY("primary"), SECONDARY, TERTIARY("tertiary"), TERTIARY_INLINE("tertiary-inline");
+        PRIMARY("primary"), SECONDARY, TERTIARY("tertiary"), TERTIARY_INLINE("tertiary-inline"),
+        OUTLINED("outlined"), CONTAINED("contained"); // Theme Material
 
         private String themeName;
 
