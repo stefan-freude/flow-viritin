@@ -11,14 +11,15 @@ import static org.vaadin.firitin.util.VStyleUtil.applyOrElse;
 
 public class VButton extends Button implements FluentHasSize<VButton>, FluentHasEnabled<VButton>,
         FluentClickNotifier<Button, VButton>, FluentHasText<VButton>, FluentFocusable<Button, VButton>,
-        FluentComponent<VButton>, FluentHasStyle<VButton> {
+        FluentComponent<VButton>, FluentHasElement<VButton>, FluentHasStyle<VButton> {
 
     private ButtonSize size;
     private ButtonType type;
     private ButtonColor color;
 
     public enum ButtonType implements ThemeStyle<ButtonType> {
-        PRIMARY("primary"), SECONDARY, TERTIARY("tertiary"), TERTIARY_INLINE("tertiary-inline");
+        PRIMARY("primary"), SECONDARY, TERTIARY("tertiary"), TERTIARY_INLINE("tertiary-inline"),
+        OUTLINED("outlined"), CONTAINED("contained"); // Theme Material
 
         private String themeName;
 

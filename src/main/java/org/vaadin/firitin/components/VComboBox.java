@@ -1,9 +1,11 @@
 package org.vaadin.firitin.components;
 
-import com.vaadin.flow.component.AbstractField.ComponentValueChangeEvent;
+import com.vaadin.flow.component.AbstractField;
 import com.vaadin.flow.component.ItemLabelGenerator;
 import com.vaadin.flow.component.combobox.ComboBox;
+import com.vaadin.flow.data.provider.DataProvider;
 import com.vaadin.flow.data.renderer.Renderer;
+import elemental.json.JsonArray;
 import org.vaadin.firitin.fluency.ui.*;
 import org.vaadin.firitin.fluency.ui.internal.FluentHasAutofocus;
 import org.vaadin.firitin.fluency.ui.internal.FluentHasLabel;
@@ -12,10 +14,10 @@ import java.util.Collection;
 
 @SuppressWarnings("unchecked")
 public class VComboBox<T> extends ComboBox<T> implements FluentHasSize<VComboBox<T>>, FluentHasValidation<VComboBox<T>>,
-        FluentHasDataProvider<VComboBox<T>, T>, FluentFocusable<ComboBox<T>, VComboBox<T>>,
+        FluentHasFilterableDataProvider<VComboBox<T>, T>, FluentFocusable<ComboBox<T>, VComboBox<T>>,
         FluentComponent<VComboBox<T>>, FluentHasLabel<VComboBox<T>>, FluentHasAutofocus<VComboBox<T>>,
         FluentHasStyle<VComboBox<T>>,
-        FluentHasValueAndElement<VComboBox<T>, ComponentValueChangeEvent<ComboBox<T>, T>, T> {
+        FluentHasValueAndElement<VComboBox<T>, AbstractField.ComponentValueChangeEvent<ComboBox<T>, T>, T> {
 
     public VComboBox() {
         super();
@@ -38,15 +40,15 @@ public class VComboBox<T> extends ComboBox<T> implements FluentHasSize<VComboBox
         return this;
     }
 
-    public VComboBox<T> withFilteredItems(T... filteredItems) {
+    public VComboBox<T> withFilteredItems(JsonArray filteredItems) {
         setFilteredItems(filteredItems);
         return this;
     }
 
-    public VComboBox<T> withFilteredItems(Collection<T> filteredItems) {
-        setFilteredItems(filteredItems);
-        return this;
-    }
+//    public VComboBox<T> withFilteredItems(Collection<T> filteredItems) {
+//        setFilteredItems(filteredItems);
+//        return this;
+//    }
 
     public VComboBox<T> withItemLabelGenerator(ItemLabelGenerator<T> itemLabelGenerator) {
         setItemLabelGenerator(itemLabelGenerator);
